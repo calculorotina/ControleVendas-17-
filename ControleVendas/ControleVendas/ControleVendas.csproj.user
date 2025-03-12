@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>C:\Users\PC\source\repos\ControleVendas\ControleVendas\Properties\PublishProfiles\ClickOnceProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="pt.projeto.conexao\CustomInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="pt.projeto.view\frmclientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="pt.projeto.view\frmFuncionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="pt.projeto.view\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="pt.projeto.view\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="pt.projeto.view\Produtos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
