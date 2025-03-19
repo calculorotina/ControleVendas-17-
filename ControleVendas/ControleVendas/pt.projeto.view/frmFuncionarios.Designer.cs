@@ -148,6 +148,7 @@
             tabfunc.TabIndex = 0;
             tabfunc.Text = "Funcionarios";
             tabfunc.UseVisualStyleBackColor = true;
+            tabfunc.Click += tabfunc_Click;
             // 
             // txtestado
             // 
@@ -255,7 +256,7 @@
             txtacesso.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtacesso.FormattingEnabled = true;
             txtacesso.Items.AddRange(new object[] { "Administrador", "Gerente", "Empregado" });
-            txtacesso.Location = new Point(992, 126);
+            txtacesso.Location = new Point(1003, 126);
             txtacesso.Name = "txtacesso";
             txtacesso.Size = new Size(244, 39);
             txtacesso.TabIndex = 44;
@@ -443,6 +444,8 @@
             tabelafunc.RowHeadersWidth = 51;
             tabelafunc.Size = new Size(1732, 398);
             tabelafunc.TabIndex = 0;
+            tabelafunc.CellClick += tabelafunc_CellClick;
+            tabelafunc.CellContentClick += tabelafunc_CellContentClick;
             // 
             // btnnovo
             // 
@@ -536,7 +539,6 @@
         private TextBox txtcargo;
         private Label lblcargo;
         private Label lblsenha;
-        private TextBox txtrg;
         private Label lblrg;
         private TextBox txtnomefunc;
         private Label lblnomefunc;
@@ -566,5 +568,6 @@
         public TabPage tabfunc;
         public DataGridView tabelafunc;
         public TabPage tablistfunc;
+        public TextBox txtrg;
     }
 }

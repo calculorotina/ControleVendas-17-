@@ -19,6 +19,9 @@
     <Compile Update="pt.projeto.view\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="pt.projeto.view\frmVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="pt.projeto.view\Menu.cs">
       <SubType>Form</SubType>
     </Compile>

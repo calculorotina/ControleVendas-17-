@@ -80,3 +80,5 @@ C:\powershell\ControleVendas (17)\ControleVendas\ControleVendas\bin\Debug\net8.0
 C:\powershell\ControleVendas (17)\ControleVendas\ControleVendas\obj\Debug\net8.0-windows\Controle.34FE86E8.Up2Date
 C:\powershell\ControleVendas (17)\ControleVendas\ControleVendas\obj\Debug\net8.0-windows\ControleVendas.genruntimeconfig.cache
 C:\powershell\ControleVendas (17)\ControleVendas\ControleVendas\obj\Debug\net8.0-windows\ref\ControleVendas.dll
+C:\powershell\ControleVendas (17)\ControleVendas\ControleVendas\obj\Debug\net8.0-windows\ControleVendas.sourcelink.json
+C:\powershell\ControleVendas (17)\ControleVendas\ControleVendas\obj\Debug\net8.0-windows\ControleVendas.pt.projeto.view.frmVendas.resources

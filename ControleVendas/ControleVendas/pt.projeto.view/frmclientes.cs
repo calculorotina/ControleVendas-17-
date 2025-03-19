@@ -140,5 +140,10 @@ namespace ControleVendas.pt.projeto.view
         {
             new Models().LimparDados(this);
         }
+
+        private void tabelacliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

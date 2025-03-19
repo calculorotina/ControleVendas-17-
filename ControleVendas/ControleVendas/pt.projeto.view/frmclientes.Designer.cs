@@ -353,6 +353,7 @@
             tabelacliente.Size = new Size(1383, 391);
             tabelacliente.TabIndex = 0;
             tabelacliente.CellClick += tabelacliente_CellClick;
+            tabelacliente.CellContentClick += tabelacliente_CellContentClick;
             // 
             // btnapagar
             // 

@@ -104,10 +104,10 @@ namespace ControleVendas.pt.projeto.dao
         {
             try
             {
-                string sql = "delete from tb_funcionarios where id=@id";
+                string sql = "delete from tb_funcionarios where cpf=@cpf";
 
                 MySqlCommand executacmd = new MySqlCommand(sql, conexao);
-                executacmd.Parameters.AddWithValue("@id", obj.id);
+                executacmd.Parameters.AddWithValue("@cpf", obj.cpf);
 
                 conexao.Open();
                 executacmd.ExecuteNonQuery();
@@ -128,8 +128,8 @@ namespace ControleVendas.pt.projeto.dao
         {
             try
             {
-                string sql = @"update tb_clientes set nome=@nome, rg=@rg, cpf=@cpf, email=@email, senha=@senha, cargo=@cargo, nivel_acesso=@nivel_acesso, telefone=@telefone, celular=@celular, cep=@cep, endereco=@endereco, 
-                              numero=@numero, complemento=@complemento, bairro=@bairro, cidade=@cidade, estado=@estado where id=@id";
+                string sql = @"update tb_funcionarios set nome=@nome, rg=@rg, cpf=@cpf, email=@email, senha=@senha, cargo=@cargo, nivel_acesso=@nivel_acesso, telefone=@telefone, celular=@telemovel, cep=@cep, endereco=@Morada, 
+                              numero=@numero, complemento=@complemento, bairro=@bairro, cidade=@cidade, estado=@estado where cpf=@cpf";
 
 
                 MySqlCommand executacmd = new MySqlCommand(sql, conexao);
@@ -142,9 +142,9 @@ namespace ControleVendas.pt.projeto.dao
                 executacmd.Parameters.AddWithValue("@cargo", obj.cargo);
                 executacmd.Parameters.AddWithValue("@nivel_acesso", obj.nivel_acesso);
                 executacmd.Parameters.AddWithValue("@telefone", obj.telefone);
-                executacmd.Parameters.AddWithValue("@celular", obj.telemovel);
+                executacmd.Parameters.AddWithValue("@telemovel", obj.telemovel);
                 executacmd.Parameters.AddWithValue("@cep", obj.cep);
-                executacmd.Parameters.AddWithValue("@endereco", obj.Morada);
+                executacmd.Parameters.AddWithValue("@Morada", obj.Morada);
                 executacmd.Parameters.AddWithValue("@numero", obj.numero);
                 executacmd.Parameters.AddWithValue("@complemento", obj.complemento);
                 executacmd.Parameters.AddWithValue("@bairro", obj.bairro);

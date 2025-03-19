@@ -150,6 +150,7 @@
             menucriarvenda.Name = "menucriarvenda";
             menucriarvenda.Size = new Size(237, 36);
             menucriarvenda.Text = "Criar Venda";
+            menucriarvenda.Click += menucriarvenda_Click;
             // 
             // menulistarvenda
             // 

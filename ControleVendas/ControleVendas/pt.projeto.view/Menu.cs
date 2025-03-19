@@ -62,7 +62,7 @@ namespace ControleVendas.pt.projeto.view
         {
             menudata.Text = DateTime.Now.ToShortDateString();
             timer1.Start();
-            
+
 
 
 
@@ -75,6 +75,12 @@ namespace ControleVendas.pt.projeto.view
         private void timer1_Tick(object sender, EventArgs e)
         {
             menuhora.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void menucriarvenda_Click(object sender, EventArgs e)
+        {
+            frmVendas telavendas = new frmVendas();
+            telavendas.ShowDialog();
         }
     }
 }
