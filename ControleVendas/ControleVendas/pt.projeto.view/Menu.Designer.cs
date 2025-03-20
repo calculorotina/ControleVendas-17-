@@ -107,12 +107,14 @@
             menucriarfornecedor.Name = "menucriarfornecedor";
             menucriarfornecedor.Size = new Size(300, 36);
             menucriarfornecedor.Text = "Criar Fornecedor";
+            menucriarfornecedor.Click += menucriarfornecedor_Click;
             // 
             // menulistarfornecedor
             // 
             menulistarfornecedor.Name = "menulistarfornecedor";
             menulistarfornecedor.Size = new Size(300, 36);
             menulistarfornecedor.Text = "Listar Fornecedores";
+            menulistarfornecedor.Click += menulistarfornecedor_Click;
             // 
             // menuprodutos
             // 

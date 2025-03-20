@@ -360,7 +360,7 @@
             btnapagar.BackColor = Color.DodgerBlue;
             btnapagar.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnapagar.ForeColor = SystemColors.ButtonHighlight;
-            btnapagar.Location = new Point(1067, 224);
+            btnapagar.Location = new Point(1063, 206);
             btnapagar.Name = "btnapagar";
             btnapagar.Size = new Size(189, 66);
             btnapagar.TabIndex = 23;
@@ -373,7 +373,7 @@
             btneditar.BackColor = Color.DodgerBlue;
             btneditar.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btneditar.ForeColor = SystemColors.ButtonHighlight;
-            btneditar.Location = new Point(749, 224);
+            btneditar.Location = new Point(745, 206);
             btneditar.Name = "btneditar";
             btneditar.Size = new Size(189, 66);
             btneditar.TabIndex = 22;
@@ -386,7 +386,7 @@
             cmdgravar.BackColor = Color.DodgerBlue;
             cmdgravar.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmdgravar.ForeColor = SystemColors.ButtonHighlight;
-            cmdgravar.Location = new Point(464, 224);
+            cmdgravar.Location = new Point(460, 206);
             cmdgravar.Name = "cmdgravar";
             cmdgravar.Size = new Size(189, 66);
             cmdgravar.TabIndex = 21;
@@ -399,7 +399,7 @@
             btnnovo.BackColor = Color.DodgerBlue;
             btnnovo.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnnovo.ForeColor = SystemColors.ButtonHighlight;
-            btnnovo.Location = new Point(176, 224);
+            btnnovo.Location = new Point(172, 206);
             btnnovo.Name = "btnnovo";
             btnnovo.Size = new Size(189, 66);
             btnnovo.TabIndex = 24;

@@ -82,5 +82,18 @@ namespace ControleVendas.pt.projeto.view
             frmVendas telavendas = new frmVendas();
             telavendas.ShowDialog();
         }
+
+        private void menucriarfornecedor_Click(object sender, EventArgs e)
+        {
+            frmFornecedores forn = new frmFornecedores();
+            forn.ShowDialog();
+        }
+
+        private void menulistarfornecedor_Click(object sender, EventArgs e)
+        {
+            frmFornecedores forn = new frmFornecedores();
+            forn.tabfornecedor1.SelectedTab = forn.tablistaforn;
+            forn.ShowDialog();
+        }
     }
 }
