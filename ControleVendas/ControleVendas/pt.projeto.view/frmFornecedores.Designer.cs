@@ -188,6 +188,7 @@
             tabelafornecedor.TabIndex = 0;
             tabelafornecedor.Text = "Fornecedores";
             tabelafornecedor.UseVisualStyleBackColor = true;
+            tabelafornecedor.Click += tabelafornecedor_Click;
             // 
             // txtestado
             // 
@@ -432,6 +433,7 @@
             tabelafornecedorgrid.RowHeadersWidth = 51;
             tabelafornecedorgrid.Size = new Size(1298, 372);
             tabelafornecedorgrid.TabIndex = 0;
+            tabelafornecedorgrid.CellClick += tabelafornecedorgrid_CellClick;
             // 
             // frmFornecedores
             // 
@@ -446,6 +448,7 @@
             Controls.Add(panel1);
             Name = "frmFornecedores";
             Text = "frmFornecedores";
+            Load += frmFornecedores_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             tabfornecedor1.ResumeLayout(false);
