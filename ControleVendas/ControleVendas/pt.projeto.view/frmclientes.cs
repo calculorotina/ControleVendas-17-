@@ -145,5 +145,10 @@ namespace ControleVendas.pt.projeto.view
         {
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

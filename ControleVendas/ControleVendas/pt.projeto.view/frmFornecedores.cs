@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using ControleVendas.pt.projeto.dao;
 using ControleVendas.pt.projeto.model;
 using ControleVendas.pt.projeto.view;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ControleVendas.pt.projeto.view
 {
@@ -114,6 +115,24 @@ namespace ControleVendas.pt.projeto.view
 
             FornecedoresDao dao = new FornecedoresDao();
             tabelafornecedorgrid.DataSource = dao.ListarFornecedores();
+        }
+
+        private void txtpesquisa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string nome = "%" + txtpesquisa.Text + "%";
+
+            FornecedoresDao dao = new FornecedoresDao();
+
+            tabelafornecedorgrid.DataSource = dao.pesquisaFornecedores(nome);
+        }
+
+        private void btnpesquisa_Click(object sender, EventArgs e)
+        {
+            string nome = txtpesquisa.Text;
+
+            FornecedoresDao dao = new FornecedoresDao();
+
+            tabelafornecedorgrid.DataSource = dao.pesquisaFornecedoresbotao(nome);
         }
     }
 }

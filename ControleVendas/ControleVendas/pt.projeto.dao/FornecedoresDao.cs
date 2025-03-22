@@ -157,5 +157,70 @@ namespace ControleVendas.pt.projeto.dao
 
         }
 
+        public DataTable pesquisaFornecedores(string nome)
+        {
+            DataTable tabelafornecedorgrid = new DataTable();
+            try
+            {
+                string sql = "select * from tb_fornecedores where nome like @nome";
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+
+                executacmd.Parameters.AddWithValue("@nome", nome);
+
+
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(tabelafornecedorgrid);
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro na query SQL: " + erro.Message);
+            }
+            finally
+            {
+                if (conexao.State == ConnectionState.Open)
+                {
+                    conexao.Close();
+                }
+            }
+
+            return tabelafornecedorgrid;
+        }
+
+        public DataTable pesquisaFornecedoresbotao(string nome)
+        {
+            DataTable tabelafornecedorgrid = new DataTable();
+            try
+            {
+
+                string sql = "select * from tb_fornecedores where nome = @nome";
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+
+                executacmd.Parameters.AddWithValue("@nome", nome);
+
+
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(tabelafornecedorgrid);
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro na query SQL: " + erro.Message);
+            }
+            finally
+            {
+                if (conexao.State == ConnectionState.Open)
+                {
+                    conexao.Close();
+                }
+            }
+
+            return tabelafornecedorgrid;
+        }
+
     }
 }

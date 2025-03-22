@@ -63,6 +63,8 @@
             txtcodigo = new TextBox();
             lblcodigo = new Label();
             tablistaforn = new TabPage();
+            btnpesquisa = new Button();
+            txtpesquisa = new TextBox();
             tabelafornecedorgrid = new DataGridView();
             panel1.SuspendLayout();
             tabfornecedor1.SuspendLayout();
@@ -416,6 +418,8 @@
             // 
             // tablistaforn
             // 
+            tablistaforn.Controls.Add(btnpesquisa);
+            tablistaforn.Controls.Add(txtpesquisa);
             tablistaforn.Controls.Add(tabelafornecedorgrid);
             tablistaforn.Location = new Point(4, 29);
             tablistaforn.Name = "tablistaforn";
@@ -425,13 +429,35 @@
             tablistaforn.Text = "Lista de Fornecedores";
             tablistaforn.UseVisualStyleBackColor = true;
             // 
+            // btnpesquisa
+            // 
+            btnpesquisa.BackColor = Color.DodgerBlue;
+            btnpesquisa.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnpesquisa.ForeColor = SystemColors.ButtonHighlight;
+            btnpesquisa.Location = new Point(460, 20);
+            btnpesquisa.Name = "btnpesquisa";
+            btnpesquisa.Size = new Size(189, 51);
+            btnpesquisa.TabIndex = 24;
+            btnpesquisa.Text = "Pesquisar";
+            btnpesquisa.UseVisualStyleBackColor = false;
+            btnpesquisa.Click += btnpesquisa_Click;
+            // 
+            // txtpesquisa
+            // 
+            txtpesquisa.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtpesquisa.Location = new Point(83, 27);
+            txtpesquisa.Name = "txtpesquisa";
+            txtpesquisa.Size = new Size(298, 38);
+            txtpesquisa.TabIndex = 23;
+            txtpesquisa.KeyPress += txtpesquisa_KeyPress;
+            // 
             // tabelafornecedorgrid
             // 
             tabelafornecedorgrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            tabelafornecedorgrid.Location = new Point(6, 6);
+            tabelafornecedorgrid.Location = new Point(6, 96);
             tabelafornecedorgrid.Name = "tabelafornecedorgrid";
             tabelafornecedorgrid.RowHeadersWidth = 51;
-            tabelafornecedorgrid.Size = new Size(1298, 372);
+            tabelafornecedorgrid.Size = new Size(1298, 282);
             tabelafornecedorgrid.TabIndex = 0;
             tabelafornecedorgrid.CellClick += tabelafornecedorgrid_CellClick;
             // 
@@ -455,6 +481,7 @@
             tabelafornecedor.ResumeLayout(false);
             tabelafornecedor.PerformLayout();
             tablistaforn.ResumeLayout(false);
+            tablistaforn.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)tabelafornecedorgrid).EndInit();
             ResumeLayout(false);
         }
@@ -497,5 +524,7 @@
         public TabPage tabelafornecedor;
         public DataGridView tabelafornecedorgrid;
         public TabPage tablistaforn;
+        private Button btnpesquisa;
+        private TextBox txtpesquisa;
     }
 }
