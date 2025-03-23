@@ -28,7 +28,8 @@ namespace ControleVendas.pt.projeto.view
 
         private void menucriarproduto_Click(object sender, EventArgs e)
         {
-
+            Produtos prod = new Produtos();
+            prod.ShowDialog();
         }
 
         private void menucriarcliente_Click(object sender, EventArgs e)
@@ -94,6 +95,13 @@ namespace ControleVendas.pt.projeto.view
             frmFornecedores forn = new frmFornecedores();
             forn.tabfornecedor1.SelectedTab = forn.tablistaforn;
             forn.ShowDialog();
+        }
+
+        private void menulistarproduto_Click(object sender, EventArgs e)
+        {
+            Produtos prod = new Produtos();
+            prod.tabelaprodutos.SelectedTab = prod.tablistprodutos;
+            prod.ShowDialog();
         }
     }
 }

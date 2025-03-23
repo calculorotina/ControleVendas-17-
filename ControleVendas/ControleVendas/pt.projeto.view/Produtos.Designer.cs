@@ -30,29 +30,33 @@
         {
             panel1 = new Panel();
             lblprodutos = new Label();
-            tabControl1 = new TabControl();
+            tabelaprodutos = new TabControl();
             tabprodutos = new TabPage();
+            txtfornecedor = new ComboBox();
+            txtcodigo = new TextBox();
+            label1 = new Label();
+            lblfornid = new Label();
+            txtfamilia = new ComboBox();
+            lblfamilia = new Label();
+            textBox1 = new TextBox();
+            lblquantidade = new Label();
+            txtpreco = new TextBox();
+            lblpreco = new Label();
+            txtdescricao = new TextBox();
+            lblnome = new Label();
             tablistprodutos = new TabPage();
+            dataproduto = new DataGridView();
             btnnovo = new Button();
             btngravar = new Button();
             btneditar = new Button();
             btnpagar = new Button();
-            lblnome = new Label();
-            txtdescricao = new TextBox();
-            txtpreco = new TextBox();
-            lblpreco = new Label();
-            textBox1 = new TextBox();
-            lblquantidade = new Label();
-            textBox2 = new TextBox();
-            lblfamilia = new Label();
-            txtfamilia = new ComboBox();
-            lblfornid = new Label();
-            dataGridView1 = new DataGridView();
+            btnpesquisa = new Button();
+            txtpesquisa = new TextBox();
             panel1.SuspendLayout();
-            tabControl1.SuspendLayout();
+            tabelaprodutos.SuspendLayout();
             tabprodutos.SuspendLayout();
             tablistprodutos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataproduto).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -75,21 +79,23 @@
             lblprodutos.TabIndex = 0;
             lblprodutos.Text = "Produtos";
             // 
-            // tabControl1
+            // tabelaprodutos
             // 
-            tabControl1.Controls.Add(tabprodutos);
-            tabControl1.Controls.Add(tablistprodutos);
-            tabControl1.Location = new Point(12, 163);
-            tabControl1.Name = "tabControl1";
-            tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(1186, 301);
-            tabControl1.TabIndex = 1;
+            tabelaprodutos.Controls.Add(tabprodutos);
+            tabelaprodutos.Controls.Add(tablistprodutos);
+            tabelaprodutos.Location = new Point(12, 163);
+            tabelaprodutos.Name = "tabelaprodutos";
+            tabelaprodutos.SelectedIndex = 0;
+            tabelaprodutos.Size = new Size(1186, 301);
+            tabelaprodutos.TabIndex = 1;
             // 
             // tabprodutos
             // 
+            tabprodutos.Controls.Add(txtfornecedor);
+            tabprodutos.Controls.Add(txtcodigo);
+            tabprodutos.Controls.Add(label1);
             tabprodutos.Controls.Add(lblfornid);
             tabprodutos.Controls.Add(txtfamilia);
-            tabprodutos.Controls.Add(textBox2);
             tabprodutos.Controls.Add(lblfamilia);
             tabprodutos.Controls.Add(textBox1);
             tabprodutos.Controls.Add(lblquantidade);
@@ -104,10 +110,133 @@
             tabprodutos.TabIndex = 0;
             tabprodutos.Text = "Produtos";
             tabprodutos.UseVisualStyleBackColor = true;
+            tabprodutos.Click += tabprodutos_Click;
+            // 
+            // txtfornecedor
+            // 
+            txtfornecedor.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtfornecedor.FormattingEnabled = true;
+            txtfornecedor.Items.AddRange(new object[] { "Desktops", "Portateis", "Servidores" });
+            txtfornecedor.Location = new Point(270, 182);
+            txtfornecedor.Name = "txtfornecedor";
+            txtfornecedor.Size = new Size(250, 39);
+            txtfornecedor.TabIndex = 12;
+            // 
+            // txtcodigo
+            // 
+            txtcodigo.Location = new Point(185, 29);
+            txtcodigo.Multiline = true;
+            txtcodigo.Name = "txtcodigo";
+            txtcodigo.Size = new Size(110, 38);
+            txtcodigo.TabIndex = 11;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.DarkGray;
+            label1.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(19, 29);
+            label1.Name = "label1";
+            label1.Size = new Size(105, 38);
+            label1.TabIndex = 10;
+            label1.Text = "Codigo";
+            // 
+            // lblfornid
+            // 
+            lblfornid.AutoSize = true;
+            lblfornid.BackColor = Color.DarkGray;
+            lblfornid.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblfornid.Location = new Point(19, 183);
+            lblfornid.Name = "lblfornid";
+            lblfornid.Size = new Size(193, 38);
+            lblfornid.TabIndex = 9;
+            lblfornid.Text = "Fornecedor_id";
+            // 
+            // txtfamilia
+            // 
+            txtfamilia.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtfamilia.FormattingEnabled = true;
+            txtfamilia.Items.AddRange(new object[] { "Desktops", "Portateis", "Servidores" });
+            txtfamilia.Location = new Point(751, 104);
+            txtfamilia.Name = "txtfamilia";
+            txtfamilia.Size = new Size(219, 39);
+            txtfamilia.TabIndex = 8;
+            // 
+            // lblfamilia
+            // 
+            lblfamilia.AutoSize = true;
+            lblfamilia.BackColor = Color.DarkGray;
+            lblfamilia.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblfamilia.Location = new Point(574, 101);
+            lblfamilia.Name = "lblfamilia";
+            lblfamilia.Size = new Size(103, 38);
+            lblfamilia.TabIndex = 6;
+            lblfamilia.Text = "Familia";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(270, 101);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(171, 38);
+            textBox1.TabIndex = 5;
+            // 
+            // lblquantidade
+            // 
+            lblquantidade.AutoSize = true;
+            lblquantidade.BackColor = Color.DarkGray;
+            lblquantidade.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblquantidade.Location = new Point(51, 101);
+            lblquantidade.Name = "lblquantidade";
+            lblquantidade.Size = new Size(161, 38);
+            lblquantidade.TabIndex = 4;
+            lblquantidade.Text = "Quantidade";
+            // 
+            // txtpreco
+            // 
+            txtpreco.Location = new Point(976, 29);
+            txtpreco.Multiline = true;
+            txtpreco.Name = "txtpreco";
+            txtpreco.Size = new Size(171, 38);
+            txtpreco.TabIndex = 3;
+            txtpreco.TextChanged += textBox2_TextChanged;
+            // 
+            // lblpreco
+            // 
+            lblpreco.AutoSize = true;
+            lblpreco.BackColor = Color.DarkGray;
+            lblpreco.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblpreco.Location = new Point(857, 29);
+            lblpreco.Name = "lblpreco";
+            lblpreco.Size = new Size(87, 38);
+            lblpreco.TabIndex = 2;
+            lblpreco.Text = "Preço";
+            // 
+            // txtdescricao
+            // 
+            txtdescricao.Location = new Point(511, 29);
+            txtdescricao.Multiline = true;
+            txtdescricao.Name = "txtdescricao";
+            txtdescricao.Size = new Size(313, 38);
+            txtdescricao.TabIndex = 1;
+            // 
+            // lblnome
+            // 
+            lblnome.AutoSize = true;
+            lblnome.BackColor = Color.DarkGray;
+            lblnome.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblnome.Location = new Point(348, 29);
+            lblnome.Name = "lblnome";
+            lblnome.Size = new Size(137, 38);
+            lblnome.TabIndex = 0;
+            lblnome.Text = "Descricao";
+            lblnome.Click += lblnome_Click;
             // 
             // tablistprodutos
             // 
-            tablistprodutos.Controls.Add(dataGridView1);
+            tablistprodutos.Controls.Add(btnpesquisa);
+            tablistprodutos.Controls.Add(txtpesquisa);
+            tablistprodutos.Controls.Add(dataproduto);
             tablistprodutos.Location = new Point(4, 29);
             tablistprodutos.Name = "tablistprodutos";
             tablistprodutos.Padding = new Padding(3);
@@ -115,6 +244,15 @@
             tablistprodutos.TabIndex = 1;
             tablistprodutos.Text = "Lista de produtos";
             tablistprodutos.UseVisualStyleBackColor = true;
+            // 
+            // dataproduto
+            // 
+            dataproduto.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataproduto.Location = new Point(6, 99);
+            dataproduto.Name = "dataproduto";
+            dataproduto.RowHeadersWidth = 51;
+            dataproduto.Size = new Size(1166, 163);
+            dataproduto.TabIndex = 0;
             // 
             // btnnovo
             // 
@@ -160,112 +298,25 @@
             btnpagar.Text = "Apagar";
             btnpagar.UseVisualStyleBackColor = false;
             // 
-            // lblnome
+            // btnpesquisa
             // 
-            lblnome.AutoSize = true;
-            lblnome.BackColor = Color.DarkGray;
-            lblnome.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblnome.Location = new Point(75, 30);
-            lblnome.Name = "lblnome";
-            lblnome.Size = new Size(137, 38);
-            lblnome.TabIndex = 0;
-            lblnome.Text = "Descricao";
+            btnpesquisa.BackColor = Color.DodgerBlue;
+            btnpesquisa.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnpesquisa.ForeColor = SystemColors.ButtonHighlight;
+            btnpesquisa.Location = new Point(448, 22);
+            btnpesquisa.Name = "btnpesquisa";
+            btnpesquisa.Size = new Size(189, 51);
+            btnpesquisa.TabIndex = 24;
+            btnpesquisa.Text = "Pesquisar";
+            btnpesquisa.UseVisualStyleBackColor = false;
             // 
-            // txtdescricao
+            // txtpesquisa
             // 
-            txtdescricao.Location = new Point(278, 30);
-            txtdescricao.Multiline = true;
-            txtdescricao.Name = "txtdescricao";
-            txtdescricao.Size = new Size(400, 38);
-            txtdescricao.TabIndex = 1;
-            // 
-            // txtpreco
-            // 
-            txtpreco.Location = new Point(925, 30);
-            txtpreco.Multiline = true;
-            txtpreco.Name = "txtpreco";
-            txtpreco.Size = new Size(171, 38);
-            txtpreco.TabIndex = 3;
-            txtpreco.TextChanged += textBox2_TextChanged;
-            // 
-            // lblpreco
-            // 
-            lblpreco.AutoSize = true;
-            lblpreco.BackColor = Color.DarkGray;
-            lblpreco.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblpreco.Location = new Point(789, 30);
-            lblpreco.Name = "lblpreco";
-            lblpreco.Size = new Size(87, 38);
-            lblpreco.TabIndex = 2;
-            lblpreco.Text = "Preço";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(270, 101);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(171, 38);
-            textBox1.TabIndex = 5;
-            // 
-            // lblquantidade
-            // 
-            lblquantidade.AutoSize = true;
-            lblquantidade.BackColor = Color.DarkGray;
-            lblquantidade.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblquantidade.Location = new Point(51, 101);
-            lblquantidade.Name = "lblquantidade";
-            lblquantidade.Size = new Size(161, 38);
-            lblquantidade.TabIndex = 4;
-            lblquantidade.Text = "Quantidade";
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(270, 183);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(171, 38);
-            textBox2.TabIndex = 7;
-            // 
-            // lblfamilia
-            // 
-            lblfamilia.AutoSize = true;
-            lblfamilia.BackColor = Color.DarkGray;
-            lblfamilia.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblfamilia.Location = new Point(574, 101);
-            lblfamilia.Name = "lblfamilia";
-            lblfamilia.Size = new Size(103, 38);
-            lblfamilia.TabIndex = 6;
-            lblfamilia.Text = "Familia";
-            // 
-            // txtfamilia
-            // 
-            txtfamilia.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtfamilia.FormattingEnabled = true;
-            txtfamilia.Items.AddRange(new object[] { "Desktops", "Portateis", "Servidores" });
-            txtfamilia.Location = new Point(751, 104);
-            txtfamilia.Name = "txtfamilia";
-            txtfamilia.Size = new Size(219, 39);
-            txtfamilia.TabIndex = 8;
-            // 
-            // lblfornid
-            // 
-            lblfornid.AutoSize = true;
-            lblfornid.BackColor = Color.DarkGray;
-            lblfornid.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblfornid.Location = new Point(19, 183);
-            lblfornid.Name = "lblfornid";
-            lblfornid.Size = new Size(193, 38);
-            lblfornid.TabIndex = 9;
-            lblfornid.Text = "Fornecedor_id";
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(6, 6);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1166, 256);
-            dataGridView1.TabIndex = 0;
+            txtpesquisa.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtpesquisa.Location = new Point(71, 29);
+            txtpesquisa.Name = "txtpesquisa";
+            txtpesquisa.Size = new Size(298, 38);
+            txtpesquisa.TabIndex = 23;
             // 
             // Produtos
             // 
@@ -276,17 +327,19 @@
             Controls.Add(btneditar);
             Controls.Add(btngravar);
             Controls.Add(btnnovo);
-            Controls.Add(tabControl1);
+            Controls.Add(tabelaprodutos);
             Controls.Add(panel1);
             Name = "Produtos";
             Text = "Produtos";
+            Load += Produtos_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            tabControl1.ResumeLayout(false);
+            tabelaprodutos.ResumeLayout(false);
             tabprodutos.ResumeLayout(false);
             tabprodutos.PerformLayout();
             tablistprodutos.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            tablistprodutos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataproduto).EndInit();
             ResumeLayout(false);
         }
 
@@ -294,9 +347,7 @@
 
         private Panel panel1;
         private Label lblprodutos;
-        private TabControl tabControl1;
         private TabPage tabprodutos;
-        private TabPage tablistprodutos;
         private Button btnnovo;
         private Button btngravar;
         private Button btneditar;
@@ -308,9 +359,15 @@
         private TextBox textBox1;
         private Label lblquantidade;
         private ComboBox txtfamilia;
-        private TextBox textBox2;
         private Label lblfamilia;
         private Label lblfornid;
-        private DataGridView dataGridView1;
+        private DataGridView dataproduto;
+        private TextBox txtcodigo;
+        private Label label1;
+        private ComboBox txtfornecedor;
+        public TabControl tabelaprodutos;
+        public TabPage tablistprodutos;
+        private Button btnpesquisa;
+        private TextBox txtpesquisa;
     }
 }

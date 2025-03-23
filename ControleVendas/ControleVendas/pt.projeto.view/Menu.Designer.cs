@@ -137,6 +137,7 @@
             menulistarproduto.Name = "menulistarproduto";
             menulistarproduto.Size = new Size(255, 36);
             menulistarproduto.Text = "Listar Produtos";
+            menulistarproduto.Click += menulistarproduto_Click;
             // 
             // menuvendas
             // 

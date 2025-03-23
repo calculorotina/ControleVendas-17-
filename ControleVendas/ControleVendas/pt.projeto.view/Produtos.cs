@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ControleVendas.pt.projeto.dao;
 
 namespace ControleVendas.pt.projeto.view
 {
@@ -20,6 +21,24 @@ namespace ControleVendas.pt.projeto.view
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void lblnome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabprodutos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Produtos_Load(object sender, EventArgs e)
+        {
+            FornecedoresDao dao = new FornecedoresDao();
+            txtfornecedor.DataSource = dao.ListarFornecedores();
+            txtfornecedor.DisplayMember = "nome";
+            txtfornecedor.ValueMember = "id";
         }
     }
 }
