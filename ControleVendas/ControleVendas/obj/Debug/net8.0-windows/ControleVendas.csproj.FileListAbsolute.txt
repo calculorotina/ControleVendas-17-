@@ -46,7 +46,6 @@ C:\powershell\ControleVendas (17)\ControleVendas\ControleVendas\obj\Debug\net8.0
 C:\powershell\ControleVendas (17)\ControleVendas\ControleVendas\obj\Debug\net8.0-windows\ControleVendas.pt.projeto.view.frmFuncionarios.resources
 C:\powershell\ControleVendas (17)\ControleVendas\ControleVendas\obj\Debug\net8.0-windows\ControleVendas.pt.projeto.view.frmLogin.resources
 C:\powershell\ControleVendas (17)\ControleVendas\ControleVendas\obj\Debug\net8.0-windows\ControleVendas.pt.projeto.view.Menu.resources
-C:\powershell\ControleVendas (17)\ControleVendas\ControleVendas\obj\Debug\net8.0-windows\ControleVendas.pt.projeto.view.Produtos.resources
 C:\powershell\ControleVendas (17)\ControleVendas\ControleVendas\obj\Debug\net8.0-windows\ControleVendas.csproj.GenerateResource.cache
 C:\powershell\ControleVendas (17)\ControleVendas\ControleVendas\obj\Debug\net8.0-windows\ControleVendas.GeneratedMSBuildEditorConfig.editorconfig
 C:\powershell\ControleVendas (17)\ControleVendas\ControleVendas\obj\Debug\net8.0-windows\ControleVendas.AssemblyInfoInputs.cache
@@ -83,3 +82,4 @@ C:\powershell\ControleVendas (17)\ControleVendas\ControleVendas\obj\Debug\net8.0
 C:\powershell\ControleVendas (17)\ControleVendas\ControleVendas\obj\Debug\net8.0-windows\ControleVendas.sourcelink.json
 C:\powershell\ControleVendas (17)\ControleVendas\ControleVendas\obj\Debug\net8.0-windows\ControleVendas.pt.projeto.view.frmVendas.resources
 C:\powershell\ControleVendas (17)\ControleVendas\ControleVendas\obj\Debug\net8.0-windows\ControleVendas.pt.projeto.view.frmFornecedores.resources
+C:\powershell\ControleVendas (17)\ControleVendas\ControleVendas\obj\Debug\net8.0-windows\ControleVendas.pt.projeto.view.frmProdutos.resources

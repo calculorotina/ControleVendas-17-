@@ -28,7 +28,7 @@ namespace ControleVendas.pt.projeto.view
 
         private void menucriarproduto_Click(object sender, EventArgs e)
         {
-            Produtos prod = new Produtos();
+            frmProdutos prod = new frmProdutos();
             prod.ShowDialog();
         }
 
@@ -99,7 +99,7 @@ namespace ControleVendas.pt.projeto.view
 
         private void menulistarproduto_Click(object sender, EventArgs e)
         {
-            Produtos prod = new Produtos();
+            frmProdutos prod = new frmProdutos();
             prod.tabelaprodutos.SelectedTab = prod.tablistprodutos;
             prod.ShowDialog();
         }

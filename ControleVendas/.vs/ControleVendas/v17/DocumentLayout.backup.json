@@ -1,12 +1,53 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\powershell\\ControleVendas (17)\\ControleVendas\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7D68554B-818D-4A2C-A776-B15B06AC9550}|ControleVendas\\ControleVendas.csproj|c:\\powershell\\controlevendas (17)\\controlevendas\\controlevendas\\pt.projeto.view\\frmprodutos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D68554B-818D-4A2C-A776-B15B06AC9550}|ControleVendas\\ControleVendas.csproj|solutionrelative:controlevendas\\pt.projeto.view\\frmprodutos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D68554B-818D-4A2C-A776-B15B06AC9550}|ControleVendas\\ControleVendas.csproj|c:\\powershell\\controlevendas (17)\\controlevendas\\controlevendas\\pt.projeto.view\\frmprodutos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7D68554B-818D-4A2C-A776-B15B06AC9550}|ControleVendas\\ControleVendas.csproj|solutionrelative:controlevendas\\pt.projeto.view\\frmprodutos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmProdutos.cs",
+              "DocumentMoniker": "C:\\powershell\\ControleVendas (17)\\ControleVendas\\ControleVendas\\pt.projeto.view\\frmProdutos.cs",
+              "RelativeDocumentMoniker": "ControleVendas\\pt.projeto.view\\frmProdutos.cs",
+              "ToolTip": "C:\\powershell\\ControleVendas (17)\\ControleVendas\\ControleVendas\\pt.projeto.view\\frmProdutos.cs",
+              "RelativeToolTip": "ControleVendas\\pt.projeto.view\\frmProdutos.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAApwHUAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T19:12:22.808Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmProdutos.cs [Projeto]",
+              "DocumentMoniker": "C:\\powershell\\ControleVendas (17)\\ControleVendas\\ControleVendas\\pt.projeto.view\\frmProdutos.cs",
+              "RelativeDocumentMoniker": "ControleVendas\\pt.projeto.view\\frmProdutos.cs",
+              "ToolTip": "C:\\powershell\\ControleVendas (17)\\ControleVendas\\ControleVendas\\pt.projeto.view\\frmProdutos.cs [Projeto]",
+              "RelativeToolTip": "ControleVendas\\pt.projeto.view\\frmProdutos.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T19:12:17.4Z",
+              "EditorCaption": " [Projeto]"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
