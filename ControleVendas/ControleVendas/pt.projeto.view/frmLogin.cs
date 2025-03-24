@@ -29,7 +29,8 @@ namespace ControleVendas.pt.projeto.view
             {
                
                 Menu telamenu = new Menu();
-                telamenu.Show();
+                telamenu.Show(); 
+                telamenu.menuutilizador.Text = txtemail.Text;
                 this.Hide();
                 
             }

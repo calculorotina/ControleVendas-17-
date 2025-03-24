@@ -540,7 +540,6 @@
         private Label lblcargo;
         private Label lblsenha;
         private Label lblrg;
-        private TextBox txtnomefunc;
         private Label lblnomefunc;
         private TextBox txtcpf;
         private Label lblcpf;
@@ -569,5 +568,6 @@
         public DataGridView tabelafunc;
         public TabPage tablistfunc;
         public TextBox txtrg;
+        public TextBox txtnomefunc;
     }
 }

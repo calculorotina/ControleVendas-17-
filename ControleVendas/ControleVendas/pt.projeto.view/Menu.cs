@@ -9,7 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ControleVendas.pt.projeto.dao;
 using ControleVendas.pt.projeto.view;
-using ControleVendas.pt.projeto.view;
+using ControleVendas.pt.projeto.conexao;
+using ControleVendas.pt.projeto.model;
+using MySql.Data.MySqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace ControleVendas.pt.projeto.view
@@ -63,13 +65,9 @@ namespace ControleVendas.pt.projeto.view
         {
             menudata.Text = DateTime.Now.ToShortDateString();
             timer1.Start();
+           
 
-
-
-
-            //menuutilizador.Text = log.txtemail.ToString();
-
-
+            //menuutilizador.Text = log.txtemail.Text;
 
         }
 

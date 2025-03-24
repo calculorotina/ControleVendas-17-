@@ -71,7 +71,7 @@ namespace ControleVendas.pt.projeto.view
             Produtos obj = new Produtos();
             Fornecedores forn = new Fornecedores();
             obj.descricao = txtdescricao.Text;
-            obj.preco = numericUpDown1.Text;
+            obj.preco = txtpreco.Text;
             obj.quantidade = txtquantidade.Text;
             obj.familia = txtfamilia.Text;
             forn.nome = txtfornecedor.Text;
@@ -87,10 +87,10 @@ namespace ControleVendas.pt.projeto.view
             Produtos obj = new Produtos();
             obj.codigo = txtcodigo.Text;
             obj.descricao = txtdescricao.Text;
-            obj.preco = System.Convert.ToString(txtpreco.Text);
+            obj.preco = decimal.Parse(txtpreco.Text).ToString();
             obj.quantidade = txtquantidade.Text;
             obj.familia = txtfamilia.Text;
-            //obj.for_id = txtfornecedor.Text;
+            obj.for_id = txtfornecedor.SelectedValue.ToString();
 
             ProdutosDao dao = new ProdutosDao();
             dao.editarProdutos(obj);
@@ -115,7 +115,7 @@ namespace ControleVendas.pt.projeto.view
         {
             txtcodigo.Text = dataproduto.CurrentRow.Cells[0].Value.ToString();
             txtdescricao.Text = dataproduto.CurrentRow.Cells[1].Value.ToString();
-            txtpreco.Text = dataproduto.CurrentRow.Cells[2].Value.ToString();
+            txtpreco.Text = System.Convert.ToString(dataproduto.CurrentRow.Cells[2].Value.ToString());
             txtquantidade.Text = dataproduto.CurrentRow.Cells[3].Value.ToString();
             txtfamilia.Text = dataproduto.CurrentRow.Cells[4].Value.ToString();
             txtfornecedor.Text = dataproduto.CurrentRow.Cells[5].Value.ToString();

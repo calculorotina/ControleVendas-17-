@@ -40,6 +40,7 @@
             lblfamilia = new Label();
             txtquantidade = new TextBox();
             lblquantidade = new Label();
+            txtpreco = new TextBox();
             lblpreco = new Label();
             txtdescricao = new TextBox();
             lblnome = new Label();
@@ -51,7 +52,6 @@
             btngravar = new Button();
             btneditar = new Button();
             btnpagar = new Button();
-            txtpreco = new TextBox();
             panel1.SuspendLayout();
             tabelaprodutos.SuspendLayout();
             tabprodutos.SuspendLayout();
@@ -194,6 +194,16 @@
             lblquantidade.TabIndex = 4;
             lblquantidade.Text = "Quantidade";
             // 
+            // txtpreco
+            // 
+            txtpreco.Font = new Font("Segoe UI", 13.8F);
+            txtpreco.Location = new Point(976, 29);
+            txtpreco.Multiline = true;
+            txtpreco.Name = "txtpreco";
+            txtpreco.Size = new Size(171, 38);
+            txtpreco.TabIndex = 3;
+            txtpreco.TextChanged += textBox2_TextChanged;
+            // 
             // lblpreco
             // 
             lblpreco.AutoSize = true;
@@ -318,16 +328,6 @@
             btnpagar.UseVisualStyleBackColor = false;
             btnpagar.Click += btnapagar_Click;
             // 
-            // txtpreco
-            // 
-            txtpreco.Font = new Font("Segoe UI", 13.8F);
-            txtpreco.Location = new Point(976, 29);
-            txtpreco.Multiline = true;
-            txtpreco.Name = "txtpreco";
-            txtpreco.Size = new Size(171, 38);
-            txtpreco.TabIndex = 3;
-            txtpreco.TextChanged += textBox2_TextChanged;
-            // 
             // frmProdutos
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -379,6 +379,6 @@
         private TextBox txtpesquisa;
         private DataGridView dataproduto;
         public ComboBox txtfornecedor;
-        private TextBox txtpreco;
+        public TextBox txtpreco;
     }
 }

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using ControleVendas.pt.projeto.model;
 using MySql.Data.MySqlClient;
 using ControleVendas.pt.projeto.dao;
+using System.Diagnostics.Metrics;
 //using ControleVendas.pt.projeto.view;
 
 namespace ControleVendas.pt.projeto.dao
@@ -83,7 +84,8 @@ namespace ControleVendas.pt.projeto.dao
         {
             try
             {
-                string sql = @"insert into tb_produtos(descricao, preco, quantidade, familia, for_id)
+                
+                string sql = @"insert into tb_produtos (descricao, preco, quantidade, familia, for_id)
                 values(@descricao, @preco, @quantidade, @familia, @for_id)";
 
                 MySqlCommand executacmd = new MySqlCommand(sql, conexao);
