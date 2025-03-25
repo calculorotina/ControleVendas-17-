@@ -35,7 +35,13 @@ namespace ControleVendas.pt.projeto.dao
             DataTable dataproduto = new DataTable();
             try
             {
-                string sql = "select * from tb_produtos";
+                string sql = @"SELECT p.id as 'codigo',
+                                p.descricao as 'Descriçao',
+                                p.preco as 'Preço',
+                                p.quantidade as 'Quantidade',
+                                p.familia as 'Familia',
+                                f.nome as 'Fornecedor' FROM tb_produtos as p 
+                                join tb_fornecedores as f on p.for_id = f.id";
                 MySqlCommand executacmd = new MySqlCommand(sql, conexao);
                 MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
 
@@ -116,7 +122,9 @@ namespace ControleVendas.pt.projeto.dao
         {
             try
             {
-                string sql = @"update tb_produtos set descricao=@descricao, preco=@preco, quantidade=@quantidade, familia=@familia, for_id=@for_id where id=@id";
+                string sql = @"update tb_produtos set descricao=@descricao, 
+                             preco = CONVERT(REPLACE(@preco, ',', '.') using utf8mb4), quantidade=@quantidade, familia=@familia, 
+                             for_id=@for_id where id=@id";
 
 
                 MySqlCommand executacmd = new MySqlCommand(sql, conexao);

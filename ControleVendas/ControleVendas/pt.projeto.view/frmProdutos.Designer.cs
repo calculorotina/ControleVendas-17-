@@ -116,7 +116,6 @@
             // 
             txtfornecedor.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtfornecedor.FormattingEnabled = true;
-            txtfornecedor.Items.AddRange(new object[] { "Desktops", "Portateis", "Servidores" });
             txtfornecedor.Location = new Point(270, 182);
             txtfornecedor.Name = "txtfornecedor";
             txtfornecedor.Size = new Size(250, 39);
@@ -196,7 +195,8 @@
             // 
             // txtpreco
             // 
-            txtpreco.Font = new Font("Segoe UI", 13.8F);
+            txtpreco.CausesValidation = false;
+            txtpreco.Font = new Font("Arial Narrow", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtpreco.Location = new Point(976, 29);
             txtpreco.Multiline = true;
             txtpreco.Name = "txtpreco";

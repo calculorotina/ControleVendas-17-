@@ -69,12 +69,12 @@ namespace ControleVendas.pt.projeto.view
         private void btngravar_Click(object sender, EventArgs e)
         {
             Produtos obj = new Produtos();
-            Fornecedores forn = new Fornecedores();
+            
             obj.descricao = txtdescricao.Text;
-            obj.preco = txtpreco.Text;
+            obj.preco = decimal.Parse(txtpreco.Text).ToString();
             obj.quantidade = txtquantidade.Text;
             obj.familia = txtfamilia.Text;
-            forn.nome = txtfornecedor.Text;
+            obj.for_id = txtfornecedor.SelectedValue.ToString();
 
             ProdutosDao dao = new ProdutosDao();
             dao.CriarProdutos(obj);
@@ -85,7 +85,7 @@ namespace ControleVendas.pt.projeto.view
         private void btneditar_Click(object sender, EventArgs e)
         {
             Produtos obj = new Produtos();
-            obj.codigo = txtcodigo.Text;
+            obj.codigo = int.Parse(txtcodigo.Text).ToString();
             obj.descricao = txtdescricao.Text;
             obj.preco = decimal.Parse(txtpreco.Text).ToString();
             obj.quantidade = txtquantidade.Text;
