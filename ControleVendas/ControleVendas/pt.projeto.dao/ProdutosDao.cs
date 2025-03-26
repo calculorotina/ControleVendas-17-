@@ -181,5 +181,42 @@ namespace ControleVendas.pt.projeto.dao
 
             return dataproduto;
         }
+
+        public Produtos ListarProdutosCodigo(int id) 
+        {
+            try
+            {
+                string sql = "select * from tb_produtos where id=@id";
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+
+                executacmd.Parameters.AddWithValue("@id", id);
+                conexao.Open();
+
+                MySqlDataReader rs = executacmd.ExecuteReader();
+
+                if (rs.Read())
+                {
+                    Produtos p = new Produtos();
+                    p.codigo = rs.GetInt32("id").ToString();
+                    p.descricao = rs.GetString("descricao");
+                    p.preco = rs.GetDecimal("preco").ToString();
+
+                    return p;
+                }
+                else
+                {
+                    return null;
+                }
+
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Erro ao listar os produtos por codigo" + erro);
+                return null;
+            }
+
+
+        }
     }
 }

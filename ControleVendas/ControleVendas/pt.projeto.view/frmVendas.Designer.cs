@@ -31,18 +31,20 @@
             txttitulo = new Label();
             panel1 = new Panel();
             groupBox1 = new GroupBox();
-            groupBox2 = new GroupBox();
-            txtcodigocliente = new TextBox();
-            lblcodigo = new Label();
             txtnome = new TextBox();
             lblnome = new Label();
-            dataGridView1 = new DataGridView();
-            txtdescricaoproduto = new TextBox();
-            label1 = new Label();
-            txtpreco = new TextBox();
-            lblpreco = new Label();
+            txtcodigocliente = new TextBox();
+            lblcodigo = new Label();
+            groupBox2 = new GroupBox();
+            txtcodigoproduto = new TextBox();
+            label3 = new Label();
             txtquantidade = new TextBox();
             lblquantidade = new Label();
+            txtpreco = new TextBox();
+            lblpreco = new Label();
+            txtdescricaoproduto = new TextBox();
+            label1 = new Label();
+            dataGridView1 = new DataGridView();
             btncancelar = new Button();
             btnpagamento = new Button();
             groupBox3 = new GroupBox();
@@ -50,8 +52,6 @@
             label2 = new Label();
             btnremover = new Button();
             btnadicionar = new Button();
-            txtcodigoproduto = new TextBox();
-            label3 = new Label();
             panel1.SuspendLayout();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -91,41 +91,6 @@
             groupBox1.TabIndex = 2;
             groupBox1.TabStop = false;
             // 
-            // groupBox2
-            // 
-            groupBox2.Controls.Add(txtcodigoproduto);
-            groupBox2.Controls.Add(label3);
-            groupBox2.Controls.Add(txtquantidade);
-            groupBox2.Controls.Add(lblquantidade);
-            groupBox2.Controls.Add(txtpreco);
-            groupBox2.Controls.Add(lblpreco);
-            groupBox2.Controls.Add(txtdescricaoproduto);
-            groupBox2.Controls.Add(label1);
-            groupBox2.Location = new Point(12, 380);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(579, 243);
-            groupBox2.TabIndex = 3;
-            groupBox2.TabStop = false;
-            // 
-            // txtcodigocliente
-            // 
-            txtcodigocliente.Font = new Font("Segoe UI", 12F);
-            txtcodigocliente.Location = new Point(140, 49);
-            txtcodigocliente.Name = "txtcodigocliente";
-            txtcodigocliente.Size = new Size(178, 34);
-            txtcodigocliente.TabIndex = 3;
-            // 
-            // lblcodigo
-            // 
-            lblcodigo.AutoSize = true;
-            lblcodigo.BackColor = SystemColors.ControlDark;
-            lblcodigo.Font = new Font("Segoe UI", 16.2F);
-            lblcodigo.Location = new Point(15, 49);
-            lblcodigo.Name = "lblcodigo";
-            lblcodigo.Size = new Size(105, 38);
-            lblcodigo.TabIndex = 2;
-            lblcodigo.Text = "Codigo";
-            // 
             // txtnome
             // 
             txtnome.Font = new Font("Segoe UI", 12F);
@@ -145,34 +110,82 @@
             lblnome.TabIndex = 4;
             lblnome.Text = "Nome";
             // 
-            // dataGridView1
+            // txtcodigocliente
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(623, 170);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(732, 387);
-            dataGridView1.TabIndex = 4;
+            txtcodigocliente.Font = new Font("Segoe UI", 12F);
+            txtcodigocliente.Location = new Point(140, 49);
+            txtcodigocliente.Name = "txtcodigocliente";
+            txtcodigocliente.Size = new Size(178, 34);
+            txtcodigocliente.TabIndex = 3;
+            txtcodigocliente.KeyPress += txtcodigocliente_KeyPress;
             // 
-            // txtdescricaoproduto
+            // lblcodigo
             // 
-            txtdescricaoproduto.Font = new Font("Segoe UI", 12F);
-            txtdescricaoproduto.Location = new Point(230, 78);
-            txtdescricaoproduto.Multiline = true;
-            txtdescricaoproduto.Name = "txtdescricaoproduto";
-            txtdescricaoproduto.Size = new Size(322, 38);
-            txtdescricaoproduto.TabIndex = 3;
+            lblcodigo.AutoSize = true;
+            lblcodigo.BackColor = SystemColors.ControlDark;
+            lblcodigo.Font = new Font("Segoe UI", 16.2F);
+            lblcodigo.Location = new Point(15, 49);
+            lblcodigo.Name = "lblcodigo";
+            lblcodigo.Size = new Size(105, 38);
+            lblcodigo.TabIndex = 2;
+            lblcodigo.Text = "Codigo";
             // 
-            // label1
+            // groupBox2
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.DarkGray;
-            label1.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(27, 78);
-            label1.Name = "label1";
-            label1.Size = new Size(137, 38);
-            label1.TabIndex = 2;
-            label1.Text = "Descricao";
+            groupBox2.Controls.Add(txtcodigoproduto);
+            groupBox2.Controls.Add(label3);
+            groupBox2.Controls.Add(txtquantidade);
+            groupBox2.Controls.Add(lblquantidade);
+            groupBox2.Controls.Add(txtpreco);
+            groupBox2.Controls.Add(lblpreco);
+            groupBox2.Controls.Add(txtdescricaoproduto);
+            groupBox2.Controls.Add(label1);
+            groupBox2.Location = new Point(12, 380);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(579, 243);
+            groupBox2.TabIndex = 3;
+            groupBox2.TabStop = false;
+            // 
+            // txtcodigoproduto
+            // 
+            txtcodigoproduto.Font = new Font("Segoe UI", 12F);
+            txtcodigoproduto.Location = new Point(230, 23);
+            txtcodigoproduto.Multiline = true;
+            txtcodigoproduto.Name = "txtcodigoproduto";
+            txtcodigoproduto.Size = new Size(171, 38);
+            txtcodigoproduto.TabIndex = 9;
+            txtcodigoproduto.KeyPress += txtcodigoproduto_KeyPress;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.DarkGray;
+            label3.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(59, 23);
+            label3.Name = "label3";
+            label3.Size = new Size(105, 38);
+            label3.TabIndex = 8;
+            label3.Text = "Codigo";
+            // 
+            // txtquantidade
+            // 
+            txtquantidade.Font = new Font("Segoe UI", 12F);
+            txtquantidade.Location = new Point(230, 183);
+            txtquantidade.Multiline = true;
+            txtquantidade.Name = "txtquantidade";
+            txtquantidade.Size = new Size(171, 38);
+            txtquantidade.TabIndex = 7;
+            // 
+            // lblquantidade
+            // 
+            lblquantidade.AutoSize = true;
+            lblquantidade.BackColor = Color.DarkGray;
+            lblquantidade.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblquantidade.Location = new Point(3, 183);
+            lblquantidade.Name = "lblquantidade";
+            lblquantidade.Size = new Size(161, 38);
+            lblquantidade.TabIndex = 6;
+            lblquantidade.Text = "Quantidade";
             // 
             // txtpreco
             // 
@@ -194,25 +207,34 @@
             lblpreco.TabIndex = 4;
             lblpreco.Text = "Preço";
             // 
-            // txtquantidade
+            // txtdescricaoproduto
             // 
-            txtquantidade.Font = new Font("Segoe UI", 12F);
-            txtquantidade.Location = new Point(230, 183);
-            txtquantidade.Multiline = true;
-            txtquantidade.Name = "txtquantidade";
-            txtquantidade.Size = new Size(171, 38);
-            txtquantidade.TabIndex = 7;
+            txtdescricaoproduto.Font = new Font("Segoe UI", 12F);
+            txtdescricaoproduto.Location = new Point(230, 78);
+            txtdescricaoproduto.Multiline = true;
+            txtdescricaoproduto.Name = "txtdescricaoproduto";
+            txtdescricaoproduto.Size = new Size(322, 38);
+            txtdescricaoproduto.TabIndex = 3;
             // 
-            // lblquantidade
+            // label1
             // 
-            lblquantidade.AutoSize = true;
-            lblquantidade.BackColor = Color.DarkGray;
-            lblquantidade.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblquantidade.Location = new Point(3, 183);
-            lblquantidade.Name = "lblquantidade";
-            lblquantidade.Size = new Size(161, 38);
-            lblquantidade.TabIndex = 6;
-            lblquantidade.Text = "Quantidade";
+            label1.AutoSize = true;
+            label1.BackColor = Color.DarkGray;
+            label1.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(27, 78);
+            label1.Name = "label1";
+            label1.Size = new Size(137, 38);
+            label1.TabIndex = 2;
+            label1.Text = "Descricao";
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(623, 170);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(732, 387);
+            dataGridView1.TabIndex = 4;
             // 
             // btncancelar
             // 
@@ -288,26 +310,6 @@
             btnadicionar.Text = "Adicionar";
             btnadicionar.UseVisualStyleBackColor = false;
             // 
-            // txtcodigoproduto
-            // 
-            txtcodigoproduto.Font = new Font("Segoe UI", 12F);
-            txtcodigoproduto.Location = new Point(230, 23);
-            txtcodigoproduto.Multiline = true;
-            txtcodigoproduto.Name = "txtcodigoproduto";
-            txtcodigoproduto.Size = new Size(171, 38);
-            txtcodigoproduto.TabIndex = 9;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.DarkGray;
-            label3.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(59, 23);
-            label3.Name = "label3";
-            label3.Size = new Size(105, 38);
-            label3.TabIndex = 8;
-            label3.Text = "Codigo";
-            // 
             // frmVendas
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -347,7 +349,6 @@
         private TextBox txtnome;
         private Label lblnome;
         private DataGridView dataGridView1;
-        private TextBox txtdescricaoproduto;
         private Label label1;
         private TextBox txtpreco;
         private Label lblpreco;
@@ -362,5 +363,6 @@
         private Button btnadicionar;
         private TextBox txtcodigoproduto;
         private Label label3;
+        public TextBox txtdescricaoproduto;
     }
 }

@@ -15,6 +15,8 @@ namespace ControleVendas.pt.projeto.dao
     public class ClienteDao
     {
         private MySqlConnection conexao;
+        //clientes c = new clientes();
+        //ClienteDao cdao = new ClienteDao();
 
         public ClienteDao()
         {
@@ -215,6 +217,43 @@ namespace ControleVendas.pt.projeto.dao
             }
 
             return tabelacliente;
+        }
+
+        public clientes ListarClientesCodigo(int id)
+        {
+            try
+            {
+                string sql = "select * from tb_clientes where id=@id";
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+
+                executacmd.Parameters.AddWithValue("@id", id);
+                conexao.Open();
+
+                MySqlDataReader rs = executacmd.ExecuteReader();
+
+                if (rs.Read())
+                {
+                    clientes p = new clientes();
+                    p.codigo = rs.GetInt32("id");
+                    p.nome = rs.GetString("nome");
+                    
+
+                    return p;
+                }
+                else
+                {
+                    return null;
+                }
+
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Erro ao listar os clientes por codigo" + erro);
+                return null;
+            }
+
+
         }
 
     }
