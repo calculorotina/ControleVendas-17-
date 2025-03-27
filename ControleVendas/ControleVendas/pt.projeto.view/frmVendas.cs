@@ -19,9 +19,22 @@ namespace ControleVendas.pt.projeto.view
 
         clientes c = new clientes();
         ClienteDao clienteDao = new ClienteDao();
+
+        int qtd;
+        decimal preco;
+        decimal subtotal, total;
+        DataTable carrinho = new DataTable();
         public frmVendas()
         {
             InitializeComponent();
+            carrinho.Columns.Add("Codigo", typeof(int));
+            carrinho.Columns.Add("Produto", typeof(string));
+            carrinho.Columns.Add("Quantidade", typeof(int));
+            carrinho.Columns.Add("Preço", typeof(decimal));
+            carrinho.Columns.Add("Subtotal", typeof(decimal));
+
+            tabelaprodutos.DataSource = carrinho;
+
         }
 
         private void txtcodigoproduto_KeyPress(object sender, KeyPressEventArgs e)
@@ -46,6 +59,44 @@ namespace ControleVendas.pt.projeto.view
                 txtnome.Text = c.nome.ToString();
 
             }
+        }
+
+        private void frmVendas_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnadicionar_Click(object sender, EventArgs e)
+        {
+            qtd = int.Parse(txtquantidade.Text);
+            preco = decimal.Parse(txtpreco.Text);
+
+            subtotal = qtd * preco;
+            total += subtotal;
+
+            carrinho.Rows.Add(int.Parse(txtcodigoproduto.Text), txtdescricaoproduto.Text, qtd, preco, subtotal);
+            txttotal.Text = total.ToString();
+
+            txtcodigoproduto.Clear();
+            txtdescricaoproduto.Clear();
+            txtquantidade.Clear();
+            txtpreco.Clear();
+
+            txtcodigocliente.Focus();
+        }
+
+        private void btnremover_Click(object sender, EventArgs e)
+        {
+            decimal subproduto = decimal.Parse(tabelaprodutos.CurrentRow.Cells[4].Value.ToString());
+            int indice = tabelaprodutos.CurrentRow.Index;
+            DataRow linha = carrinho.Rows[indice];
+
+            carrinho.Rows.Remove(linha);
+            carrinho.AcceptChanges();
+
+            total -= subproduto;
+            txttotal.Text = total.ToString();
+            MessageBox.Show("Produto removido do carrinho com sucesso");
         }
     }
 }

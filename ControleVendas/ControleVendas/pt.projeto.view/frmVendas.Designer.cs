@@ -44,7 +44,7 @@
             lblpreco = new Label();
             txtdescricaoproduto = new TextBox();
             label1 = new Label();
-            dataGridView1 = new DataGridView();
+            tabelaprodutos = new DataGridView();
             btncancelar = new Button();
             btnpagamento = new Button();
             groupBox3 = new GroupBox();
@@ -55,7 +55,7 @@
             panel1.SuspendLayout();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)tabelaprodutos).BeginInit();
             groupBox3.SuspendLayout();
             SuspendLayout();
             // 
@@ -150,9 +150,8 @@
             // 
             txtcodigoproduto.Font = new Font("Segoe UI", 12F);
             txtcodigoproduto.Location = new Point(230, 23);
-            txtcodigoproduto.Multiline = true;
             txtcodigoproduto.Name = "txtcodigoproduto";
-            txtcodigoproduto.Size = new Size(171, 38);
+            txtcodigoproduto.Size = new Size(171, 34);
             txtcodigoproduto.TabIndex = 9;
             txtcodigoproduto.KeyPress += txtcodigoproduto_KeyPress;
             // 
@@ -227,14 +226,14 @@
             label1.TabIndex = 2;
             label1.Text = "Descricao";
             // 
-            // dataGridView1
+            // tabelaprodutos
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(623, 170);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(732, 387);
-            dataGridView1.TabIndex = 4;
+            tabelaprodutos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            tabelaprodutos.Location = new Point(623, 170);
+            tabelaprodutos.Name = "tabelaprodutos";
+            tabelaprodutos.RowHeadersWidth = 51;
+            tabelaprodutos.Size = new Size(732, 387);
+            tabelaprodutos.TabIndex = 4;
             // 
             // btncancelar
             // 
@@ -298,6 +297,7 @@
             btnremover.TabIndex = 9;
             btnremover.Text = "Remover";
             btnremover.UseVisualStyleBackColor = false;
+            btnremover.Click += btnremover_Click;
             // 
             // btnadicionar
             // 
@@ -309,6 +309,7 @@
             btnadicionar.TabIndex = 8;
             btnadicionar.Text = "Adicionar";
             btnadicionar.UseVisualStyleBackColor = false;
+            btnadicionar.Click += btnadicionar_Click;
             // 
             // frmVendas
             // 
@@ -320,19 +321,20 @@
             Controls.Add(groupBox3);
             Controls.Add(btncancelar);
             Controls.Add(btnpagamento);
-            Controls.Add(dataGridView1);
+            Controls.Add(tabelaprodutos);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Controls.Add(panel1);
             Name = "frmVendas";
             Text = "frmVendas";
+            Load += frmVendas_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)tabelaprodutos).EndInit();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             ResumeLayout(false);
@@ -344,11 +346,9 @@
         private Panel panel1;
         private GroupBox groupBox1;
         private GroupBox groupBox2;
-        private TextBox txtcodigocliente;
         private Label lblcodigo;
         private TextBox txtnome;
         private Label lblnome;
-        private DataGridView dataGridView1;
         private Label label1;
         private TextBox txtpreco;
         private Label lblpreco;
@@ -361,8 +361,10 @@
         private Label label2;
         private Button btnremover;
         private Button btnadicionar;
-        private TextBox txtcodigoproduto;
         private Label label3;
         public TextBox txtdescricaoproduto;
+        public TextBox txtcodigoproduto;
+        public DataGridView tabelaprodutos;
+        public TextBox txtcodigocliente;
     }
 }

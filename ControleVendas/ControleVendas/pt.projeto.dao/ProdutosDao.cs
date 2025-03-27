@@ -200,11 +200,13 @@ namespace ControleVendas.pt.projeto.dao
                     p.codigo = rs.GetInt32("id").ToString();
                     p.descricao = rs.GetString("descricao");
                     p.preco = rs.GetDecimal("preco").ToString();
-
+                    conexao.Close();
                     return p;
                 }
                 else
                 {
+                    MessageBox.Show("Nenhum produto encontrado");
+                    conexao.Close();
                     return null;
                 }
 
