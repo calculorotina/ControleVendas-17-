@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{7D68554B-818D-4A2C-A776-B15B06AC9550}|ControleVendas\\ControleVendas.csproj|solutionrelative:controlevendas\\pt.projeto.view\\frmvendas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{7D68554B-818D-4A2C-A776-B15B06AC9550}|ControleVendas\\ControleVendas.csproj|c:\\powershell\\controlevendas (17)\\controlevendas\\controlevendas\\pt.projeto.view\\frmpagamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D68554B-818D-4A2C-A776-B15B06AC9550}|ControleVendas\\ControleVendas.csproj|solutionrelative:controlevendas\\pt.projeto.view\\frmpagamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7D68554B-818D-4A2C-A776-B15B06AC9550}|ControleVendas\\ControleVendas.csproj|c:\\powershell\\controlevendas (17)\\controlevendas\\controlevendas\\pt.projeto.view\\frmvendas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7D68554B-818D-4A2C-A776-B15B06AC9550}|ControleVendas\\ControleVendas.csproj|solutionrelative:controlevendas\\pt.projeto.view\\frmvendas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
@@ -28,22 +32,35 @@
               "RelativeDocumentMoniker": "ControleVendas\\pt.projeto.view\\frmVendas.cs",
               "ToolTip": "C:\\powershell\\ControleVendas (17)\\ControleVendas\\ControleVendas\\pt.projeto.view\\frmVendas.cs",
               "RelativeToolTip": "ControleVendas\\pt.projeto.view\\frmVendas.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAApwE0AAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAtwG8AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T21:39:05.041Z",
+              "WhenOpened": "2025-03-28T22:05:10.64Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "frmVendas.cs [Projeto]",
               "DocumentMoniker": "C:\\powershell\\ControleVendas (17)\\ControleVendas\\ControleVendas\\pt.projeto.view\\frmVendas.cs",
               "RelativeDocumentMoniker": "ControleVendas\\pt.projeto.view\\frmVendas.cs",
               "ToolTip": "C:\\powershell\\ControleVendas (17)\\ControleVendas\\ControleVendas\\pt.projeto.view\\frmVendas.cs [Projeto]",
               "RelativeToolTip": "ControleVendas\\pt.projeto.view\\frmVendas.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T21:38:30.388Z",
+              "WhenOpened": "2025-03-28T22:02:25.189Z",
               "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmPagamento.cs",
+              "DocumentMoniker": "C:\\powershell\\ControleVendas (17)\\ControleVendas\\ControleVendas\\pt.projeto.view\\frmPagamento.cs",
+              "RelativeDocumentMoniker": "ControleVendas\\pt.projeto.view\\frmPagamento.cs",
+              "ToolTip": "C:\\powershell\\ControleVendas (17)\\ControleVendas\\ControleVendas\\pt.projeto.view\\frmPagamento.cs",
+              "RelativeToolTip": "ControleVendas\\pt.projeto.view\\frmPagamento.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABIAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T21:53:14.828Z",
+              "EditorCaption": ""
             }
           ]
         }

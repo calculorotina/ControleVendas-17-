@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ControleVendas.pt.projeto.dao;
 using ControleVendas.pt.projeto.model;
+using MySqlX.XDevAPI;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ControleVendas.pt.projeto.view
 {
@@ -24,6 +26,7 @@ namespace ControleVendas.pt.projeto.view
         decimal preco;
         decimal subtotal, total;
         DataTable carrinho = new DataTable();
+        private clientes cliente;
         public frmVendas()
         {
             InitializeComponent();
@@ -63,7 +66,7 @@ namespace ControleVendas.pt.projeto.view
 
         private void frmVendas_Load(object sender, EventArgs e)
         {
-
+            txtdata.Text = DateTime.Now.ToShortDateString();
         }
 
         private void btnadicionar_Click(object sender, EventArgs e)
@@ -97,6 +100,16 @@ namespace ControleVendas.pt.projeto.view
             total -= subproduto;
             txttotal.Text = total.ToString();
             MessageBox.Show("Produto removido do carrinho com sucesso");
+        }
+
+        private void btnpagamento_Click(object sender, EventArgs e)
+        {
+            DateTime data = DateTime.Parse(txtdata.Text);
+            
+            frmPagamento tela = new frmPagamento(cliente, carrinho, data);
+            tela.txttotal.Text = total.ToString();
+
+            tela.ShowDialog();
         }
     }
 }

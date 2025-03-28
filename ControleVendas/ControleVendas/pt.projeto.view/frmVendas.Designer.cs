@@ -31,6 +31,8 @@
             txttitulo = new Label();
             panel1 = new Panel();
             groupBox1 = new GroupBox();
+            txtdata = new TextBox();
+            label4 = new Label();
             txtnome = new TextBox();
             lblnome = new Label();
             txtcodigocliente = new TextBox();
@@ -81,6 +83,8 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(txtdata);
+            groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(txtnome);
             groupBox1.Controls.Add(lblnome);
             groupBox1.Controls.Add(txtcodigocliente);
@@ -91,10 +95,29 @@
             groupBox1.TabIndex = 2;
             groupBox1.TabStop = false;
             // 
+            // txtdata
+            // 
+            txtdata.Font = new Font("Segoe UI", 12F);
+            txtdata.Location = new Point(131, 33);
+            txtdata.Name = "txtdata";
+            txtdata.Size = new Size(178, 34);
+            txtdata.TabIndex = 7;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.BackColor = SystemColors.ControlDark;
+            label4.Font = new Font("Segoe UI", 16.2F);
+            label4.Location = new Point(37, 33);
+            label4.Name = "label4";
+            label4.Size = new Size(74, 38);
+            label4.TabIndex = 6;
+            label4.Text = "Data";
+            // 
             // txtnome
             // 
             txtnome.Font = new Font("Segoe UI", 12F);
-            txtnome.Location = new Point(140, 128);
+            txtnome.Location = new Point(128, 160);
             txtnome.Name = "txtnome";
             txtnome.Size = new Size(407, 34);
             txtnome.TabIndex = 5;
@@ -104,7 +127,7 @@
             lblnome.AutoSize = true;
             lblnome.BackColor = SystemColors.ControlDark;
             lblnome.Font = new Font("Segoe UI", 16.2F);
-            lblnome.Location = new Point(27, 128);
+            lblnome.Location = new Point(15, 160);
             lblnome.Name = "lblnome";
             lblnome.Size = new Size(93, 38);
             lblnome.TabIndex = 4;
@@ -113,7 +136,7 @@
             // txtcodigocliente
             // 
             txtcodigocliente.Font = new Font("Segoe UI", 12F);
-            txtcodigocliente.Location = new Point(140, 49);
+            txtcodigocliente.Location = new Point(131, 93);
             txtcodigocliente.Name = "txtcodigocliente";
             txtcodigocliente.Size = new Size(178, 34);
             txtcodigocliente.TabIndex = 3;
@@ -124,7 +147,7 @@
             lblcodigo.AutoSize = true;
             lblcodigo.BackColor = SystemColors.ControlDark;
             lblcodigo.Font = new Font("Segoe UI", 16.2F);
-            lblcodigo.Location = new Point(15, 49);
+            lblcodigo.Location = new Point(6, 93);
             lblcodigo.Name = "lblcodigo";
             lblcodigo.Size = new Size(105, 38);
             lblcodigo.TabIndex = 2;
@@ -256,6 +279,7 @@
             btnpagamento.TabIndex = 5;
             btnpagamento.Text = "Pagamento";
             btnpagamento.UseVisualStyleBackColor = false;
+            btnpagamento.Click += btnpagamento_Click;
             // 
             // groupBox3
             // 
@@ -357,7 +381,6 @@
         private Button btncancelar;
         private Button btnpagamento;
         private GroupBox groupBox3;
-        private TextBox txttotal;
         private Label label2;
         private Button btnremover;
         private Button btnadicionar;
@@ -366,5 +389,8 @@
         public TextBox txtcodigoproduto;
         public DataGridView tabelaprodutos;
         public TextBox txtcodigocliente;
+        public TextBox txtdata;
+        private Label label4;
+        public TextBox txttotal;
     }
 }

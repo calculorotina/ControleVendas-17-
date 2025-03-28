@@ -83,3 +83,4 @@ C:\powershell\ControleVendas (17)\ControleVendas\ControleVendas\obj\Debug\net8.0
 C:\powershell\ControleVendas (17)\ControleVendas\ControleVendas\obj\Debug\net8.0-windows\ControleVendas.pt.projeto.view.frmVendas.resources
 C:\powershell\ControleVendas (17)\ControleVendas\ControleVendas\obj\Debug\net8.0-windows\ControleVendas.pt.projeto.view.frmFornecedores.resources
 C:\powershell\ControleVendas (17)\ControleVendas\ControleVendas\obj\Debug\net8.0-windows\ControleVendas.pt.projeto.view.frmProdutos.resources
+C:\powershell\ControleVendas (17)\ControleVendas\ControleVendas\obj\Debug\net8.0-windows\ControleVendas.pt.projeto.view.frmPagamento.resources
