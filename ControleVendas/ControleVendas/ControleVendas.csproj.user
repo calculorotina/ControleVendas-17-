@@ -7,7 +7,7 @@
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="pt.projeto.conexao\CustomInstaller.cs">
+    <Compile Update="pt.projeto.conection\CustomInstaller.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Update="pt.projeto.view\frmclientes.cs">

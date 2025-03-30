@@ -69,6 +69,7 @@
             txtdinheiro.Name = "txtdinheiro";
             txtdinheiro.Size = new Size(269, 47);
             txtdinheiro.TabIndex = 3;
+            //txtdinheiro.TextChanged += txtdinheiro_TextChanged;
             // 
             // lblcodigo
             // 
