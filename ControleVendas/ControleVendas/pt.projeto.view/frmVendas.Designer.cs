@@ -376,7 +376,6 @@
         private Label label1;
         private TextBox txtpreco;
         private Label lblpreco;
-        private TextBox txtquantidade;
         private Label lblquantidade;
         private Button btncancelar;
         private Button btnpagamento;
@@ -392,5 +391,6 @@
         public TextBox txtdata;
         private Label label4;
         public TextBox txttotal;
+        public TextBox txtquantidade;
     }
 }

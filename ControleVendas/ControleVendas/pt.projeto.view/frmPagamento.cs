@@ -19,7 +19,7 @@ namespace ControleVendas.pt.projeto.view
         clientes cliente = new clientes();
         DataTable carrinho = new DataTable();
         DateTime data;
-        decimal dinheiro, cartao, troco;
+        //decimal c, t, tr;
         public frmPagamento(clientes cliente, DataTable carrinho, DateTime data)
         {
             this.cliente = cliente;
@@ -35,34 +35,50 @@ namespace ControleVendas.pt.projeto.view
 
         private void frmPagamento_Load(object sender, EventArgs e)
         {
-
+            txttroco.Text = "0,00";
+            txtdinheiro.Text = "0,00";
+            txtcartao.Text = "0,00";
         }
 
         private void btnpagamento_Click(object sender, EventArgs e)
         {
-            vendas obj = new vendas();
-            frmVendas vendas = new frmVendas();
-            obj.cliente_id = int.Parse(vendas.txtcodigocliente.Text);
-            obj.data = DateTime.Parse(vendas.txtdata.Text);
-            obj.total_venda = Decimal.Parse(vendas.txttotal.Text);
-            //obj.observacoes = txtlocalidade.Text;
+            try
+            {
+                decimal d, c, troco, totalpago, total;
 
+                d = decimal.Parse(txtdinheiro.Text);
+                c = decimal.Parse(txtcartao.Text);
+                total = decimal.Parse(txttotal.Text);
 
-            vendasDao dao = new vendasDao();
-            dao.PagamentoVendas(obj);
+                totalpago = d + c;
 
-            //tabelacliente.DataSource = dao.ListarClientes();
+                if (totalpago <= total)
+                {
+                    MessageBox.Show("O total pago é menor que o total de venda");
+                } else
+                {
+                    troco = totalpago - total;
+                    vendas venda = new vendas();
 
-            //falta esta parte
+                    venda.cliente_id = cliente.id;
+                    venda.data = data;
+                    venda.total_venda = total;
+                    venda.observacoes = txtobservacoes.Text;
 
-            Itensvendas venda = new Itensvendas();
+                    vendasDao vd = new vendasDao();
+                    txttroco.Text = troco.ToString();
 
-            //venda.venda_id = int.Parse(carrinho.Columns.Add("subtotal"));
-            //venda.produto_id = DateTime.Parse(vendas.txtdata.Text);
-            //venda.quantidade = Decimal.Parse(vendas.txttotal.Text);
-            //venda.subtotal = Decimal.Parse();
+                    vd.PagamentoVendas(venda);
+                }
 
-            dao.PagamentoitemVendas(venda);
+                
+
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Aconteceu o erro: " + erro);
+            }
         }
         //falta esta parte
         private void txtdinheiro_KeyPress(object sender, KeyPressEventArgs e, decimal v, decimal t, decimal tr)
@@ -70,20 +86,14 @@ namespace ControleVendas.pt.projeto.view
 
         }
 
-        /*private void txtdinheiro_TextChanged(object sender, EventArgs e, decimal v, decimal t, decimal tr)
+        private void txtdinheiro_TextChanged(object sender, EventArgs e)
         {
-            try
-            {
-                v = decimal.Parse(txtdinheiro.Text);
-                t = decimal.Parse(txttotal.Text);
-                tr = decimal.Parse(txttroco.Text);
-                tr = v - t;
-            }
-            catch (Exception erro)
-            {
+            
+        }
 
-                MessageBox.Show("Aconteceu algo errado, verifique o codigo" + erro);
-            }
-        }*/
+        private void txtdinheiro_KeyUp(object sender, KeyEventArgs e)
+        {
+            
+        }
     }
 }

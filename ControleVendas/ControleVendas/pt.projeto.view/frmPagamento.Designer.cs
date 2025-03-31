@@ -39,6 +39,8 @@
             txttotal = new TextBox();
             label3 = new Label();
             btnpagamento = new Button();
+            label4 = new Label();
+            txtobservacoes = new TextBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -48,7 +50,7 @@
             panel1.Controls.Add(txttitulo);
             panel1.Location = new Point(2, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(526, 115);
+            panel1.Size = new Size(949, 115);
             panel1.TabIndex = 1;
             // 
             // txttitulo
@@ -56,7 +58,7 @@
             txttitulo.AutoSize = true;
             txttitulo.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txttitulo.ForeColor = SystemColors.ButtonHighlight;
-            txttitulo.Location = new Point(144, 31);
+            txttitulo.Location = new Point(377, 28);
             txttitulo.Name = "txttitulo";
             txttitulo.Size = new Size(223, 54);
             txttitulo.TabIndex = 0;
@@ -69,7 +71,8 @@
             txtdinheiro.Name = "txtdinheiro";
             txtdinheiro.Size = new Size(269, 47);
             txtdinheiro.TabIndex = 3;
-            //txtdinheiro.TextChanged += txtdinheiro_TextChanged;
+            txtdinheiro.TextChanged += txtdinheiro_TextChanged;
+            txtdinheiro.KeyUp += txtdinheiro_KeyUp;
             // 
             // lblcodigo
             // 
@@ -151,11 +154,32 @@
             btnpagamento.UseVisualStyleBackColor = false;
             btnpagamento.Click += btnpagamento_Click;
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Location = new Point(501, 155);
+            label4.Name = "label4";
+            label4.Size = new Size(79, 41);
+            label4.TabIndex = 26;
+            label4.Text = "Obs:";
+            // 
+            // txtobservacoes
+            // 
+            txtobservacoes.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtobservacoes.Location = new Point(603, 152);
+            txtobservacoes.Multiline = true;
+            txtobservacoes.Name = "txtobservacoes";
+            txtobservacoes.Size = new Size(323, 258);
+            txtobservacoes.TabIndex = 27;
+            // 
             // frmPagamento
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(529, 518);
+            ClientSize = new Size(956, 518);
+            Controls.Add(txtobservacoes);
+            Controls.Add(label4);
             Controls.Add(btnpagamento);
             Controls.Add(txttotal);
             Controls.Add(label3);
@@ -179,14 +203,16 @@
 
         private Panel panel1;
         private Label txttitulo;
-        private TextBox txtdinheiro;
         private Label lblcodigo;
-        private TextBox txtcartao;
         private Label label1;
-        private TextBox txttroco;
         private Label label2;
         private Label label3;
         private Button btnpagamento;
         public TextBox txttotal;
+        public TextBox txtdinheiro;
+        public TextBox txtcartao;
+        public TextBox txttroco;
+        private Label label4;
+        public TextBox txtobservacoes;
     }
 }
