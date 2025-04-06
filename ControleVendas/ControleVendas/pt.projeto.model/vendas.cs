@@ -8,7 +8,7 @@ namespace ControleVendas.pt.projeto.model
 {
     public class vendas
     {
-        public int id { get; set; }
+        //public int id { get; set; }
         public int cliente_id { get; set; }
         public DateTime data { get; set; }
         public decimal total_venda { get; set; }

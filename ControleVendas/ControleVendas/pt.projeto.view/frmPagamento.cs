@@ -11,20 +11,34 @@ using ControleVendas.pt.projeto.model;
 using ControleVendas.pt.projeto.view;
 using MySqlX.XDevAPI;
 using ControleVendas.pt.projeto.dao;
+using MySql.Data.MySqlClient;
 
 namespace ControleVendas.pt.projeto.view
 {
     public partial class frmPagamento : Form
     {
+        private MySqlConnection conexao;
+
         clientes cliente = new clientes();
         DataTable carrinho = new DataTable();
         DateTime data;
         //decimal c, t, tr;
+
+        public class ConnectionFactory
+        {
+            public MySqlConnection getConnection()
+            {
+                string connectionString = "Server=localhost;Database=vendas;Uid=root;Pwd=12345;";
+                return new MySqlConnection(connectionString);
+            }
+        }
+
         public frmPagamento(clientes cliente, DataTable carrinho, DateTime data)
         {
             this.cliente = cliente;
             this.carrinho = carrinho;
             this.data = data;
+            this.conexao = new ConnectionFactory().getConnection();
             InitializeComponent();
         }
 
@@ -95,5 +109,7 @@ namespace ControleVendas.pt.projeto.view
         {
             
         }
+
+
     }
 }

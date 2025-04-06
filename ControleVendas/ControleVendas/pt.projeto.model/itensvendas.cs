@@ -10,7 +10,7 @@ namespace ControleVendas.pt.projeto.model
     {
         public int venda_id { get; set; }
         public int produto_id { get; set; }
-        public int quantidade { get; set; }
+        public int qtd { get; set; }
         public decimal subtotal { get; set; }
     }
 }

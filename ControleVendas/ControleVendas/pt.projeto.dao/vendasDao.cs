@@ -47,11 +47,12 @@ namespace ControleVendas.pt.projeto.dao
 
                 conexao.Open();
                 executacmd.ExecuteNonQuery();
-                conexao.Close();
+                
                 
 
 
                 MessageBox.Show("Venda Criada com sucesso");
+                conexao.Close();
             }
             catch (Exception erro)
             {
@@ -61,34 +62,32 @@ namespace ControleVendas.pt.projeto.dao
 
         }
 
-        public void PagamentoitemVendas(Itensvendas obj)
+        public int RetornaId()
         {
             try
             {
-
-                string sql = @"insert into tb_itensvendas (venda_id, produto_id, qtd, subtotal)
-                values(@venda_id, @produto_id, @quantidade, @subtotal)";
+                int idvenda = 0;
+                string sql = @"select max(id) id from tb_vendas";
 
                 MySqlCommand executacmd = new MySqlCommand(sql, conexao);
-
-                executacmd.Parameters.AddWithValue("@cliente_id", obj.venda_id);
-                executacmd.Parameters.AddWithValue("@produto_id", obj.produto_id);
-                executacmd.Parameters.AddWithValue("@quantidade", obj.quantidade);
-                executacmd.Parameters.AddWithValue("@subtotal", obj.subtotal);
-
-
                 conexao.Open();
-                executacmd.ExecuteNonQuery();
-                conexao.Close();
 
+                MySqlDataReader reader = executacmd.ExecuteReader();
 
+                if (reader.Read())
+                {
+                    idvenda = reader.GetInt32("id");
+                    conexao.Close();
 
-                MessageBox.Show("Venda Criada com sucesso");
+                }
+                return idvenda;
             }
             catch (Exception erro)
             {
 
-                MessageBox.Show("Existe um erro no codigo" + erro.Message);
+                MessageBox.Show("Aconteceu o erro" + erro);
+                conexao.Close();
+                return 0;
             }
 
         }
